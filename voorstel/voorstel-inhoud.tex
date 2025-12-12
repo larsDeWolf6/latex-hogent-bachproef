@@ -11,74 +11,194 @@
 % kader van het vak Research Methods dat ik (vorig/dit) academiejaar heb
 % uitgewerkt (met medesturent VOORNAAM NAAM als mede-auteur).
 % 
-
 \section{Inleiding}%
 \label{sec:inleiding}
 
-Waarover zal je bachelorproef gaan? Introduceer het thema en zorg dat volgende zaken zeker duidelijk aanwezig zijn:
+\subsection{Context van betrouwbare AI en de EU AI Act}
 
+De snelle opmars van Artificiële Intelligentie (AI) benadrukt de noodzaak van robuuste governance-mechanismen. Wereldwijd worden AI-systemen steeds vaker geëvalueerd aan kernprincipes zoals eerlijkheid, inclusiviteit, veiligheid en verantwoordingsplicht \autocite{Herrera-Poyatos2025}.
+
+De EU Artificial Intelligence Act (AI Act) is het eerste bindende reguleringskader dat een risicogebaseerd classificatiesysteem hanteert. Het legt wettelijke verplichtingen op voor hoog-risico AI-systemen. \autocite{EUAIAct_EuroParl2023}.
+
+\subsection{Kernbegrippen}
+
+Voor dit onderzoek worden de volgende kernbegrippen gehanteerd:
 \begin{itemize}
-  \item kaderen thema
-  \item de doelgroep
-  \item de probleemstelling en (centrale) onderzoeksvraag
-  \item de onderzoeksdoelstelling
+    \item \textbf{Betrouwbaarheid:} De mate waarin een AI-systeem consistente en correcte resultaten oplevert, inclusief robuustheid tegen fouten, menselijke controle en minimale bias.
+    \item \textbf{Transparantie:} Het vermogen om beslissingen, processen en aannames van een AI-systeem inzichtelijk en uitlegbaar te maken voor stakeholders, inclusief documentatie en traceerbaarheid.
+    \item \textbf{Wettelijkheid:} De naleving van relevante wet- en regelgeving, in het bijzonder de vereisten van de EU AI Act voor hoog-risico systemen.
+\end{itemize}
+\subsection{Probleemstelling en onderzoeksvraag}%
+\label{sec:probleemstelling_en_onderzoeksvraag}
+
+Veel organisaties kampen met een kloof tussen wettelijke vereisten en hun capaciteit om AI-systemen te auditen. Belangrijke uitdagingen zijn:
+\begin{itemize}
+    \item Gebrek aan verantwoordingsplicht en traceerbaarheid van beslissingen \autocite{Ojewale2024}.
+    \item Beperkte transparantie van complexe AI-modellen.
+    \item Onvoldoende tools en richtlijnen voor naleving van de EU AI Act.
 \end{itemize}
 
-Denk er aan: een typische bachelorproef is \textit{toegepast onderzoek}, wat betekent dat je start vanuit een concrete probleemsituatie in bedrijfscontext, een \textbf{casus}. Het is belangrijk om je onderwerp goed af te bakenen: je gaat voor die \textit{ene specifieke probleemsituatie} op zoek naar een goede oplossing, op basis van de huidige kennis in het vakgebied.
+Hieruit volgt de centrale onderzoeksvraag:  
+\emph{Hoe kan een gestructureerd AI-Auditframework, gebaseerd op betrouwbaarheid, transparantie en wettelijkheid, organisaties ondersteunen bij het auditen van AI-systemen?}
+\textbf{Deelvragen met betrekking tot het probleemdomein:}
+\begin{itemize}
+    \item Welke tekortkomingen bestaan er vandaag in bestaande AI-auditmethodes met betrekking tot betrouwbaarheid, transparantie en wettelijkheid?
+    \item In welke mate voldoen organisaties momenteel aan de audit- en documentatievereisten zoals opgelegd door de EU AI Act voor hoog-risico AI-systemen?
+    \item Welke barrières ervaren IT-auditors en organisaties bij het auditen van complexe, weinig transparante AI-systemen?
+\end{itemize}
 
-De doelgroep moet ook concreet en duidelijk zijn, dus geen algemene of vaag gedefinieerde groepen zoals \emph{bedrijven}, \emph{developers}, \emph{Vlamingen}, enz. Je richt je in elk geval op it-professionals, een bachelorproef is geen populariserende tekst. Eén specifiek bedrijf (die te maken hebben met een concrete probleemsituatie) is dus beter dan \emph{bedrijven} in het algemeen.
+\textbf{Deelvragen met betrekking tot de oplossingsdomein:}
+\begin{itemize}
+    \item Hoe kan het AI-Auditframework zodanig worden ontworpen dat het drie kernpijlers structureel integreert in controlemechanismen en auditstappen?
+    \item In welke mate kan een Proof of Concept aantonen dat het gecreëerde framework effectied de vereisten van de EU AI Act operationaliseert in pracktische auditcontroles?
+    \item Hoe bruiknaar en toepasbaar wordt het framework beoordeeld door experts wanneer het wordt toegepast op een specifiek AI-systeem in een case study?
+\end{itemize}
 
-Formuleer duidelijk de onderzoeksvraag! De begeleiders lezen nog steeds te veel voorstellen waarin we geen onderzoeksvraag terugvinden.
+\subsection{Doelstellingen}%
+\label{sec:doelstellingen_van_het_onderzoek}
 
-Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
+Dit onderzoek richt zich op het ontwerp, de analyse en validatie van een AI-Auditframework:
+\begin{itemize}
+    \item Definiëren van wettelijke vereisten en tekortkomingen in huidige auditprocessen.
+    \item Ontwerpen van een framework dat betrouwbaarheid, transparantie en wettelijkheid integreert.
+    \item Valideren van het framework via een Proof of Concept (PoC).
+\end{itemize}
 
+De doelgroep zijn IT-auditors en consultants die AI-systemen implementeren, met als doel een gestructureerde aanpak voor audit en compliance te bieden.
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{Literatuurstudie}%
 \label{sec:literatuurstudie}
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
+\subsection{De Verschuiving naar betrouwbare AI (TAI) en verantwoordingsplicht.}
+De aandacht voor TAI is de afgelopen jaren exponentieel toegenomen. Internationale instellingen zoals de OECD en Europese comissie hebben kernprincipes voor verdere ontwikkeling van AI-systemen. 
+Betrouwbaarheid vormt hierin een centrale pijler en omvat dimensies zoals menselijke tussenkomt en controle, eerlijkheid, technische robuustheid en verantwoordingsplicht.
+Vooral die verantwoordingsplicht (accountability) is cruciaal, omdat zij bepaalt in welke mate een organisatie kan aantonen dat beslissingen die door AI worden gegenereerd controleerbaar, uitlegbaar en juridisch verdedigbaar zijn.
+\autocite{Herrera-Poyatos2025}  
 
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
+Het belang van betrouwbaarheid in AI-systemen vloeit voort uit de potentiële risico’s die gepaard gaan met fouten, bias, gebrek aan transparantie of onverwacht systeemgedrag. Omdat deze systemen vaak worden toegepast in domeinen met hoge maatschappelijke impact kunnen onbetrouwbare outputs leiden tot maatschappelijk of economisch schade, verlies van vertrouwen, en juridische aansprakelijkheid.
 
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
+Betrouwbare AI kent doorgaans vier onderling verbonden componenten:
+\begin{itemize}
+    \item Technische robuustheid en veiligheid: AI-systemen moeten bestand zijn tegen fouten, datavervuiling en degradatie in prestaties.
+    \item Menselijke tussenkomst en controle: Er moet altijd een mogelijkheid zijn voor menselijke supervisie en interventie.
+    \item Eerlijkheid: AI-systemen moeten ontworpen zijn om bias te minimaliseren
+    \item Verantwoordingsplicht (accountability): Organisaties moeten in staat zijn om beslissingen die door AI-systemen worden genomen te verantwoorden en te documenteren.
+\end{itemize}
+\autocite{IIA_AI_Auditing_Framework_2024}
 
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
+\subsection{Transparantie als fundamentele pijler van betrouwbare AI.}
 
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
+Naast betrouwbaarheid vormt transparantie een kernvoorwaarde voor de verantwoorde ontwikkeling en inzet van AI-systemen. Transparantie verwijst naar de mate waarin de werking, beperkingen, aannames en besluitvormingsprocessen van een AI-systeem inzichtelijk en begrijpelijk zijn voor verschillende stakeholders, waaronder ontwikkelaars, auditors, eindgebruikers en toezichthoudende instanties. De noodzaak van transparantie is sterk toegenomen naarmate AI-modellen complexer zijn geworden en beslissingen steeds vaker plaatsvinden binnen black-boxarchitecturen, zoals deep learning-modellen. Gebrek aan transparantie kan leiden tot onbegrip, wantrouwen, verkeerde interpretaties van modeluitvoer en een verhoogd risico op misbruik of onbedoelde schade. Transparantie wordt hierdoor niet enkel gezien als een technische vereiste, maar ook als een maatschappelijke en juridische verplichting, essentieel voor zowel verantwoordingsplicht als naleving van regelgeving zoals de EU AI Act.
 
-% Voor literatuurverwijzingen zijn er twee belangrijke commando's:
-% \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
-%   geen onderdeel is van de zin.
-% \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
-%   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
-%   ...'')
+Transparantie omvat meerdere onderling verbonden componenten die samen bijdragen aan de auditbaarheid en begrijpelijkheid van AI-systemen:
+\begin{itemize}
+    \item Uitlegbaarheid: Het vermogen om de beslissingen en outputs van een AI-systeem te verklaren op een manier die begrijpelijk is voor verschillende stakeholders.
+    \item Traceerbaarheid: Het vermogen om de herkomst van data, modelbeslissingen en wijzigingen in het systeem te volgen.
+    \item Documentatie: Gedetailleerde beschrijvingen van het ontwerp, de ontwikkeling, de training en de implementatie van AI-systemen.
+    \item Communicatie: Effectieve communicatie over de capaciteiten, beperkingen en risico's van AI-systemen naar alle betrokken partijen.
+\end{itemize}
+\autocite{doshi-velez2017interpretable}
 
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
+\subsection{De EU AI Act als katalysator.}
+De EU AI Act overstijgt de vrijwillige benaderingen door bindende Wettelijkheid te eisen voor hoog-risico systemen. Eerst dienen de AI-systemen geclassificeerd te worden volgens hun risiconiveau, waarna specifieke wettelijke vereisten van toepassing zijn.
+Verboden AI-systemen zijn:
+\begin{itemize}
+    \item Systemen die manipulatieve technieken gebruiken om schade te veroorzaken.
+    \item Systemen die sociale credit scoring toepassen.
+    \item Real-time remote biometrische identificatie in openbare ruimtes
+\end{itemize}
 
+Onder hoog-risico AI-systemen vallen onder andere systemen die ingezet worden voor:
+\begin{itemize}
+    \item gebruik in kritieke infrastructuren (transport, energie).
+    \item gebruik in onderwijs of beroepsopleiding.
+    \item gebruik in werkplekbeheer.
+    \item gebruik in rechtshandhaving.
+    \item gebruik in migratie, asiel en grensbeheer.
+    \item Assistentie bij juridische procedures.
+\end{itemize}
+
+Deze classificatie heeft directe implicaties voor de auditvereisten, waarbij hoog-risico systemen onderworpen zijn aan strengere controles en \\ documentatie-eisen om naleving van de EU AI Act te waarborgen.
+
+Generatieve AI-systemen zijn momenteel geen hoog-risico systemen maar moeten wel voldoen aan volgende transparantie-eisen:
+\begin{itemize}
+    \item Duidelijke communicatie naar gebruikers dat ze interageren met een AI-systeem of dat de content gegenereerd is door AI.
+    \item Ontwerpen van het model zodanig dat het voorkomt dat het illegale content genereert.
+    \item Uitbrengen van samenvattingen van de gebruikte datasets voor training.
+\end{itemize}
+\autocite{EUAIAct_EuroParl2023}
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
+De bachelorproef is opgezet als een toegepast ontwerp- en ontwikkelingsonderzoek, 
+dat als doel heeft een innovatief framework te ontwikkelen dat een geïdentificeerd probleem oplost voor een specifieke doelgroep. 
+De methodologie is onderverdeeld in vier fasen.
 
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
+\subsection{Fase 1: Literatuuronderzoek en vereistenanalyse}
 
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
+Doel: Het vaststellen van de functionele en niet-functionele eisen van het framework.
+\begin{itemize}
+  \item Onderzoekstechniek: Systematische Literatuurstudie en Documentenanalyse.
+  \item Activiteiten: Het mappen van de bindende eisen (data kwaliteit, QMS, logging) naar specifieke auditdoelstellingen.
+  \item deliverable: Gedetailleerde lijst van vereisten en een conceptueel model van het framework.   
+\end{itemize}
 
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
+\subsection{Fase 2: Ontwerp van het \\ AI-Auditframework}
+Doel: Het ontwerpen van een gestructureerd AI-Auditframework.
+\begin{itemize}
+  \item Onderzoekstechniek: Ontwerp en conceptuele modellering.
+  \item Activiteiten: Het ontwikkelen van een modulaire architectuur die de drie pijlers integreert.
+  \item deliverable: Gedetailleerd ontwerpdocument van het framework.
+\end{itemize}
+\subsection{Fase 3: Implementatie van een Proof of Concept (PoC)}
+Doel: Het valideren van het ontwerp door middel van een PoC.
+\begin{itemize}
+  \item Onderzoekstechniek: Prototype-ontwikkeling.
+  \item Activiteiten: Het bouwen van een werkend prototype dat de kernfunctionaliteiten van het framework demonstreert.
+  \item deliverable: Werkend prototype en technische documentatie.
+\end{itemize}
 
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
-
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+\subsection{Fase 4: Evaluatie en Validatie}
+Doel: Het evalueren van de effectiviteit van het framework.
+\begin{itemize}
+  \item Onderzoekstechniek: Case Study en Expertbeoordeling.
+  \item Activiteiten: Het toepassen van het framework op een gesimuleerd AI-systeem en het verzamelen van feedback van experts.
+  \item deliverable: Evaluatierapport met aanbevelingen voor verdere verbetering.
+\end{itemize}
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
+Het concrete eindresultaat van dit onderzoek is de gedetailleerde procedurele blauwdruk van het AI-Auditframework, ondersteund door een werkend Proof-of-Concept en case study.
 
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
+\subsection{Resultaat: AI-Auditframework}
 
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
+De belangrijkste deliverable is een omvattend, gestructureerd Auditframework dat bestaat uit:
+\begin{itemize}
+    \item Gedetailleerde IT-Controls: Een lijst van controlepunten die alle vereisten voor betrouwbaarheid, transparantie en wettelijkheid van de EU AI Act volledig dekken.
+    \item PoC Implementatie: Een werkend prototype dat de kernfunctionaliteiten van het framework demonstreert.
+    \item Evaluatierapport: Een gedetailleerd rapport dat de effectiviteit van het framework evalueert en aanbevelingen doet voor verdere verbetering.
+\end{itemize}
 
+\subsection{Meerwaarde en doelgroep}
+
+Het framework biedt een directe meerwaarde voor IT-auditors en compliance managers:
+
+\begin{itemize}
+    \item Gestandaardiseerde aanpak: Het biedt een gestructureerde methode voor het auditen van AI-systemen, wat de consistentie en betrouwbaarheid van audits verbetert.
+    \item Naleving van de EU AI Act: Het helpt organisaties bij het waarborgen van naleving van de wettelijke vereisten, waardoor juridische risico's worden verminderd.
+    \item Verbeterde transparantie en verantwoordingsplicht: Het framework bevordert een cultuur van transparantie en verantwoordingsplicht binnen organisaties die AI-systemen implementeren.
+\end{itemize}
+
+\subsection{Hypotheses}
+
+Hypothese 1 (Wettelijkheid): Het ontwikkelde Auditframework zal, via de procedurele protocollen voor Annex VI en VII, alle wettelijk bindende vereisten van de EU AI Act voor hoog-risico systemen (Hoofdstuk III, Sectie 2) dekken en operationaliseren.
+
+Hypothese 2 (Verantwoordingsplicht): De Proof-of-Concept zal aantonen dat het framework niet alleen de evaluatiefase ondersteunt, maar ook de bredere componenten van de verantwoordingsplichtsinfrastructuur(accountability). \\
+
+De bachelorproef zal hiermee een directe, bruikbare oplossing bieden voor de governance-uitdagingen rond AI, en een waardevolle bijdrage leveren aan de ontwikkeling van betrouwbare AI-systemen binnen de EU.
+
+\newpage
